@@ -3,23 +3,22 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Add Courses</h1>
+    <h1>Tambah Kursus</h1>
 @stop
 
 @section('content')
-    {{-- Display Success Message --}}
     @if(session('success'))
-        <x-adminlte-alert theme="success" title="Success">
+        <x-adminlte-alert theme="success" title="Sukses">
             {{ session('success') }}
         </x-adminlte-alert>
     @endif
 
     <form action="{{ route('courses.store') }}" method="POST">
         @csrf
-        <x-adminlte-input name="title" label="Course Title" placeholder="Enter course title"
-            fgroup-class="col-md-6" disable-feedback/>
+        <x-adminlte-input name="title" label="Judul Kursus" placeholder="Masukkan judul kursus"
+            fgroup-class="col-md-6" disable-feedback />
 
-        <x-adminlte-textarea name="description" label="Course Description" placeholder="Enter course description"
+        <x-adminlte-textarea name="description" label="Deskripsi Kursus" placeholder="Masukkan deskripsi kursus"
             rows=5 fgroup-class="col-md-6">
             <x-slot name="prependSlot">
                 <div class="input-group-text text-lightblue">
@@ -28,7 +27,7 @@
             </x-slot>
         </x-adminlte-textarea>
 
-        <x-adminlte-input name="duration" label="Course Duration (in hours)" placeholder="Enter course duration"
+        <x-adminlte-input name="duration" label="Durasi Kursus (dalam jam)" placeholder="Masukkan durasi kursus"
             type="number" min=1 max=100 fgroup-class="col-md-6">
             <x-slot name="prependSlot">
                 <div class="input-group-text text-lightblue">
@@ -37,14 +36,15 @@
             </x-slot>
         </x-adminlte-input>
 
-        <x-adminlte-button type="submit" label="Add Course" theme="primary" icon="fas fa-save"/>
+        <a href="{{ route('courses.index') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </a>
+        <x-adminlte-button type="submit" label="Tambah Kursus" theme="primary" icon="fas fa-save"/>
     </form>
 @stop
 
 @section('css')
-    {{-- Add here extra stylesheets --}}
 @stop
 
 @section('js')
-    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
 @stop

@@ -17,10 +17,10 @@
         @csrf
         @method('PUT')
         
-        <x-adminlte-input name="title" label="Course Title" placeholder="Enter course title"
+        <x-adminlte-input name="title" label="Judul Kursus" placeholder="Masukkan judul kursus"
             value="{{ old('title', $course->title) }}" fgroup-class="col-md-6" disable-feedback/>
 
-        <x-adminlte-textarea name="description" label="Course Description" placeholder="Enter course description"
+        <x-adminlte-textarea name="description" label="Deskripsi Kursus" placeholder="Masukkan deskripsi kursus"
             rows=5 fgroup-class="col-md-6">
             <x-slot name="prependSlot">
                 <div class="input-group-text text-lightblue">
@@ -30,7 +30,7 @@
             {{ old('description', $course->description) }}
         </x-adminlte-textarea>
 
-        <x-adminlte-input name="duration" label="Course Duration (in hours)" placeholder="Enter course duration"
+        <x-adminlte-input name="duration" label="Durasi Kursus (dalam jam)" placeholder="Enter course duration"
             type="number" min=1 max=100 value="{{ old('duration', $course->duration) }}" fgroup-class="col-md-6">
             <x-slot name="prependSlot">
                 <div class="input-group-text text-lightblue">
@@ -39,6 +39,9 @@
             </x-slot>
         </x-adminlte-input>
 
+        <a href="{{ route('courses.index') }}" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Kembali
+            </a>
         <x-adminlte-button type="submit" label="Update Course" theme="primary" icon="fas fa-save"/>
     </form>
 @stop

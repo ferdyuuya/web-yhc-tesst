@@ -27,11 +27,11 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Title</th>
-                            <th>Description</th>
+                            <th>Judul</th>
+                            <th>Deskripsi</th>
                             <th>Link</th>
-                            <th>Action</th>
-                            <th>Date Added</th>
+                            <th>Opsi</th>
+                            <th>Waktu ditambahkan</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,7 +45,7 @@
                                 <td>{{ $key + 1 }}</td>
                                 <td>{{ $materialItem->title }}</td>
                                 <td>{{ Str::limit($materialItem->description, 50, '...') }}</td>
-                                <td><a href="{{ $materialItem->link }}" target="_blank">View Link</a></td>
+                                <td><a href="{{ $materialItem->link }}" target="_blank">Buka Link</a></td>
                                 <td>
                                     <a href="{{ route('material.edit', ['courseId' => $courseId, 'id' => $materialItem->id]) }}" class="btn btn-primary btn-sm">
                                         <i class="fas fa-edit"></i> Edit
@@ -54,7 +54,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">
-                                            <i class="fas fa-trash"></i> Delete
+                                            <i class="fas fa-trash"></i> Hapus
                                         </button>
                                     </form>
                                 </td>

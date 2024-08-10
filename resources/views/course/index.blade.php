@@ -24,11 +24,11 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Title</th>
-                        <th>Duration</th>
-                        <th>Description</th>
-                        <th>Action</th>
-                        <th>Date Added</th>
+                        <th>Judul</th>
+                        <th>Durasi</th>
+                        <th>Deksripsi</th>
+                        <th>Opsi</th>
+                        <th>Waktu ditambahkan</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,7 +36,7 @@
                     <tr>
                         <td>{{ $key + 1 }}</td>
                         <td>{{ $course->title }}</td>
-                        <td>{{ $course->duration }} hours</td>
+                        <td>{{ $course->duration }} jam</td>
                         <td>{{ \Str::limit($course->description, 120) }}</td> <!-- Limit the description length -->
                         <td>
                             <a href="{{ route('material.index', $course->id) }}" class="btn btn-info btn-sm">
@@ -49,7 +49,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">
-                                    <i class="fas fa-trash"></i> Delete
+                                    <i class="fas fa-trash"></i> Hapus
                                 </button>
                             </form>
                         </td>

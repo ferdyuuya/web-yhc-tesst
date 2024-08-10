@@ -321,16 +321,16 @@ return [
             'url' => '/courses',
             'icon' => 'fas fa-book-open',
         ],
-        [
-            'text' => 'Material',
-            'url' => '/material',
-            'icon' => 'fas fa-book-reader',
-        ],
-        [
-            'text' => 'Logout',
-            'url' => '/logout',
-            'icon' => 'fas fa-sign-out-alt',
-        ],
+        // [
+        //     'text' => 'Material',
+        //     'url' => '/material',
+        //     'icon' => 'fas fa-book-reader',
+        // ],
+        // [
+        //     'text' => 'Logout',
+        //     'url' => '/logout',
+        //     'icon' => 'fas fa-sign-out-alt',
+        // ],
     ],
 
     /*

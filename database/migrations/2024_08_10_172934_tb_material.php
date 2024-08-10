@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('tb_material', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->text('description');
+            $table->string('link');
             $table->unsignedBigInteger('courses_id');
-            $table->foreign('courses_id')->references('id')->on('tb_coursess');
+            $table->foreign('courses_id')->references('id')->on('tb_courses')->onDelete('cascade');;
             $table->timestamps();
         });
     }

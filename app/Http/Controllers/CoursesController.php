@@ -9,7 +9,7 @@ class CoursesController extends Controller
 {
     public function index()
     {
-        $courses = Courses::all();
+        $courses = Courses::paginate(10);
 
         return view('course.index', compact('courses'));
     }
@@ -57,6 +57,12 @@ class CoursesController extends Controller
         $course->save();
 
         return redirect()->route('courses.index')->with('success', 'Course updated successfully');
+    }
+
+    public function show($id)
+    {
+        $course = Courses::findOrFail($id);
+        return view('courses.show', compact('course'));
     }
 
     public function destroy($id)

@@ -13,7 +13,7 @@
                 <i class="fas fa-plus"></i> Tambah Materi
             </a>
             <a href="{{ route('courses.index') }}" class="btn btn-secondary ml-2">
-                <i class="fas fa-arrow-left"></i> Back to Courses
+                <i class="fas fa-arrow-left"></i> Kembali ke Kursus
             </a>
         </div>
     </div>

@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Courses;
+use App\Models\Material;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Courses::factory()->count(10)->create();
+        Material::factory()->count(10)->create();
 
     }
 }

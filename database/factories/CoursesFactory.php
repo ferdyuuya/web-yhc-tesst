@@ -20,7 +20,7 @@ class CoursesFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence, 
+            'title' => $this->faker->text(10), 
             'description' => $this->faker->paragraph, 
             'duration' => $this->faker->numberBetween(1, 100), 
         ];
